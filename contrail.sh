@@ -32,7 +32,7 @@ BS_FL_OF_PORT=${BS_FL_OF_PORT:-6633}
 CASS_MAX_HEAP_SIZE=${CASS_MAX_HEAP_SIZE:-1G}
 CASS_HEAP_NEWSIZE=${CASS_HEAP_NEWSIZE:-200M}
 GIT_BASE=${GIT_BASE:-git://github.com}
-CONTRAIL_BRANCH=${CONTRAIL_BRANCH:-master}
+CONTRAIL_BRANCH=${CONTRAIL_BRANCH:-R2.1}
 NEUTRON_PLUGIN_BRANCH=${NEUTRON_PLUGIN_BRANCH:-CONTRAIL_BRANCH}
 Q_META_DATA_IP=${Q_META_DATA_IP:-127.0.0.1}
 ZK_VER=${ZK_VER:-3.4.6}
@@ -306,7 +306,7 @@ function download_dependencies {
         apt_get install default-jdk javahelper
         apt_get install libcommons-codec-java libhttpcore-java liblog4j1.2-java
 	    apt_get install python-software-properties
-        sudo -E add-apt-repository -y cloud-archive:havana
+        sudo -E add-apt-repository -y cloud-archive:kilo
         sudo -E add-apt-repository -y ppa:opencontrail
         apt_get update
 
